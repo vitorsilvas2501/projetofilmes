@@ -1,0 +1,48 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="{%static 'minhaapp/css/style.css'%}">
+</head>
+
+<body>
+    <h1>cadastrar filmes</h1>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/cadastro/">Cadastro</a>
+        <a href="/lista/">Lista</a>
+    </nav>
+    <form method="POST">
+        {% csrf_token %}
+        <p>
+            <label>Titulo do Filme:</label>
+            <input type="text" name="titulo" required>
+        </p>
+        <p>
+            <label>Comentario:</label>
+            <textarea name="comentario" rows="4"></textarea>
+        </p>
+        <p>
+            <label>Nota:</label>
+            <select name="nota" id="nota">
+                <option >1</option>
+                <option >2</option>
+                <option >3</option>
+                <option >4</option>
+                <option >5</option>
+            </select>
+        </p>
+        <p>
+            <label>URL da Imagem:</label>
+            <input type="url" name="imagem_url">
+        </p>
+        <button type="submit">Salvar</button>
+    </form>
+
+</body>
+
+</html>

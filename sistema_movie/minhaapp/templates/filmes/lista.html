@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista</title>
+    <link rel="stylesheet" href="{% static 'minhaapp/css/style.css' %}">
+</head>
+
+<body>
+    <h1>Filmes Cadastrados</h1>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/cadastro/">Cadastro</a>
+        <a href="/lista/">Lista</a>
+    </nav>
+
+    {% if filmes %}
+        {% for filme in filmes %}
+        <div class="lista-filmes">
+            <h3>{{ filme.titulo }} <span class="estrelas nota-{{ filme.nota }}"></span></h3>
+            <a href="/detalhes/{{ filme.id }}/" >Ver Detalhes</a>
+            <a href="{% url 'deletar' filme.id %}" >Deletar</a>
+            <a href="/atualizar/{{ filme.id }}/" >Atualizar Filme</a>
+        </div>
+        {% endfor %}
+    
+    {% else %}/
+    <p>Nenhum item cadastrado ainda.</p>
+    <a href="/cadastro/">Cadastrar primeiro filme</a>
+    {% endif %}
+</body>
+
+</html>
