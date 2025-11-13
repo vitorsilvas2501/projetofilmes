@@ -1,153 +1,160 @@
 /* ======== Reset básico ======== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* ======== Corpo ======== */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f2f2f2;
-    color: #333;
-    text-align: center;
-    padding: 20px;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #e0e7ff, #f8fafc);
+  color: #2c3e50;
+  text-align: center;
+  padding: 30px;
+  min-height: 100vh;
 }
 
 /* ======== Cabeçalho principal ======== */
 h1 {
-    color: #007BFF;
-    margin-bottom: 20px;
+  color: #1e3a8a;
+  margin-bottom: 25px;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
 }
 
 /* ======== Navegação ======== */
 nav {
-    background-color: #007BFF;
-    padding: 10px;
-    border-radius: 8px;
-    margin-bottom: 30px;
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+  padding: 14px 20px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-    transition: color 0.3s;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
 }
 
 nav a:hover {
-    color: #ffcc00;
+  color: #fde047;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
 }
 
-/* ======== Card central (caso usado em outras páginas) ======== */
+/* ======== Card ======== */
 .card {
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 500px;
-    margin: 0 auto;
+  background: #fff;
+  padding: 35px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  width: 80%;
+  max-width: 520px;
+  margin: 0 auto 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 .card h1 {
-    color: #333;
-    margin-bottom: 10px;
+  color: #1e293b;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
 }
 
 .card p {
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.5;
-}
-.card-detalhes{
-    text-align: left;
-    width: 75%;
-    margin: auto;
-}
-/* ======== Formulário de cadastro ======== */
-form {
-    background-color: white;
-    width: 80%;
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: left;
+  font-size: 1rem;
+  color: #475569;
+  line-height: 1.6;
 }
 
+/* ======== Formulário ======== */
+form {
+  background: #fff;
+  width: 80%;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+
 form p {
-    margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 
 label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #333;
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #1e293b;
 }
 
 input[type="text"],
 textarea,
 select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: border-color 0.3s;
+  width: 100%;
+  padding: 12px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f9fafb;
+  transition: all 0.3s ease;
 }
 
 input[type="text"]:focus,
 textarea:focus,
 select:focus {
-    border-color: #007BFF;
-    outline: none;
+  border-color: #2563eb;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+  outline: none;
 }
 
 /* ======== Botão ======== */
 button {
-    background-color: #007BFF;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: background-color 0.3s;
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 button:hover {
-    background-color: #0056b3;
+  background: linear-gradient(90deg, #1d4ed8, #1e40af);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
 }
-/* ======== Responsividade ======== */
-@media (max-width: 600px) {
-    form {
-        width: 95%;
-        padding: 20px;
-    }
 
-    nav a {
-        margin: 0 8px;
-        font-size: 0.9rem;
-    }
-}
+/* ======== Lista de Filmes ======== */
 .lista-filmes {
-    background-color: white;
-    width: 80%;
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 23px;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    text-align: left;
+  background-color: #fff;
+  width: 80%;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  transition: all 0.3s ease;
+}
+.lista-filmes:hover {
+  transform: translateY(-3px);
 }
 
+/* ======== Estrelas ======== */
 .estrelas {
   font-size: 22px;
-  color: gold;
+  color: #fbbf24;
   letter-spacing: 2px;
 }
 .nota-0::before { content: ""; }
@@ -157,9 +164,69 @@ button:hover {
 .nota-4::before { content: "★★★★"; }
 .nota-5::before { content: "★★★★★"; }
 
+/* ======== Card de Detalhes ======== */
+.card-detalhes {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+  flex-wrap: wrap;
+}
+
 .filme-imagem img {
-    width: 45%;          
-    height: 45%;          
-    object-fit: cover;      /* corta ou ajusta a imagem mantendo proporção sem distorcer */
-    display: block;
+  width: 160px;
+  height: 220px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.info-filme {
+  flex: 1;
+  color: #334155;
+}
+
+/* ======== Responsividade ======== */
+@media (max-width: 600px) {
+  form, .card, .lista-filmes {
+    width: 95%;
+    padding: 22px;
+  }
+
+  nav a {
+    margin: 0 8px;
+    font-size: 0.9rem;
+  }
+
+  .card-detalhes {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+.botao-link {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 123, 255, 0.25);
+    margin: 0 6px;
+}
+
+.botao-link:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0, 91, 187, 0.3);
+}
+.botoes-acoes {
+  margin-top: 5px; 
+  text-align: center;
 }

@@ -1,39 +1,46 @@
-{%load static%}
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalhes - {{filme.titulo}}</title>
-    <link rel="stylesheet" href="{%static 'minhaapp/css/style.css'%}">
+    <title>Detalhes - {{ filme.titulo }}</title>
+    <link rel="stylesheet" href="{% static 'minhaapp/css/style.css' %}">
 </head>
-    
+
 <body>
+    <!-- ======== Navegação ======== -->
     <nav>
         <a href="/">Home</a>
         <a href="/cadastro/">Cadastro</a>
         <a href="/lista/">Lista</a>
     </nav>
+
+    <!-- ======== Card de Detalhes ======== -->
     <div class="card">
         <h1>{{ filme.titulo }}</h1>
+
         <div class="card-detalhes">
-        <p><strong>ID:</strong> {{ filme.id }}</p>
-        <p><strong>Nota:</strong> <span class="estrelas nota-{{ filme.nota }}"></span> </p>
-        <p><strong>Comentario:</strong> {{ filme.comentario }}</p>
             <div class="filme-imagem">
-            {% if filme.imagem_url %}
-                <img src="{{ filme.imagem_url }}" alt="Capa do filme" width="200">
-            {% else %}
-                <img src="{% static 'minhaapp/images/default.png' %}" alt="Imagem padrão" width="200">
-            {% endif %}
+                {% if filme.imagem_url %}
+                    <img src="{{ filme.imagem_url }}" alt="Capa do filme {{ filme.titulo }}">
+                {% else %}
+                    <img src="{% static 'minhaapp/images/default.png' %}" alt="Imagem padrão">
+                {% endif %}
+            </div>
+
+            <div class="info-filme">
+                <p><strong>ID:</strong> {{ filme.id }}</p>
+                <p><strong>Nota:</strong> <span class="estrelas nota-{{ filme.nota }}"></span></p>
+                <p><strong>Comentário:</strong> {{ filme.comentario }}</p>
             </div>
         </div>
-    
-        <br>
-        <div>
-            <a href="/lista/">Voltar para Lista</a>
-            <a href="/cadastro/">Cadastrar Novo</a>
+
+        <!-- ======== Ações ======== -->
+        <div class="botoes-acoes" style="margin-top: 25px;">
+            <a href="/lista/" class="botao-link"> Voltar para Lista</a>
+            <a href="/cadastro/" class="botao-link"> Cadastrar Novo</a>
         </div>
     </div>
 </body>

@@ -18,15 +18,17 @@
     </nav>
 
     {% if filmes %}
-        {% for filme in filmes %}
-        <div class="lista-filmes">
-            <h3>{{ filme.titulo }} <span class="estrelas nota-{{ filme.nota }}"></span></h3>
-            <a href="/detalhes/{{ filme.id }}/" >Ver Detalhes</a>
-            <a href="{% url 'deletar' filme.id %}" >Deletar</a>
-            <a href="/atualizar/{{ filme.id }}/" >Atualizar Filme</a>
-        </div>
-        {% endfor %}
+    {% for filme in filmes %}
+    <div class="lista-filmes">
+        <h3>{{ filme.titulo }} <span class="estrelas nota-{{ filme.nota }}"></span></h3>
+        <div class="botoes-acoes"></div>
+        <a class="botao-link" href="/detalhes/{{ filme.id }}/">Ver Detalhes</a>
+        <a class="botao-link" href="{% url 'deletar' filme.id %}">Deletar</a>
+        <a class="botao-link" href="/atualizar/{{ filme.id }}/">Atualizar Filme</a>
     
+    </div>
+    {% endfor %}
+
     {% else %}/
     <p>Nenhum item cadastrado ainda.</p>
     <a href="/cadastro/">Cadastrar primeiro filme</a>
